@@ -1,0 +1,39 @@
+<launch>
+	<machine 
+		name="marcato" 
+		address="10.0.1.27” 
+		user="viki" 
+		password="viki"
+		env-loader="/home/viki/catkin_ws/foguete.sh"> 
+	</machine>
+
+	<node 	
+		pkg="turtlesim" 
+		type="turtlesim_node" 
+		name="tartaruga1">
+	</node>
+
+	<node 	machine="marcato"
+		pkg="turtlesim" 
+		type="turtle_teleop_key" 
+		name="teleop">
+	</node>
+
+	<node 	machine="marcato"
+		pkg="first_pack" 
+		type="talker" 
+		name="falador">
+	</node>
+
+	<node 	machine="marcato"
+		pkg="usb_cam" 
+		type="usb_cam_node" 
+		name="camera">
+	</node>
+
+	<node 	machine="marcato"
+		pkg="first_pack" 
+		type="add_two_ints_server" 
+		name="somador">
+	</node>
+</launch>

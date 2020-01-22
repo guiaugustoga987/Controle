@@ -1,0 +1,21 @@
+<launch>
+	<node 	pkg="turtlesim"
+		type="turtlesim_node"
+		name="simulador" >
+	</node>
+
+
+	<node 	pkg="turtlesim"
+		type="turtlesim_teleop_key"
+		name="controlador" >
+	</node>
+
+	<node 	pkg="rostopic"
+		type="rostopic"
+		name="velocidade" >
+		args = "pub -r turtle1/cmd_vel geometry_msgs/Twist -- '[1.0,0.0,0.0]' '[0.0,0.0,0.0]'
+
+	</node>
+
+	
+</launch>

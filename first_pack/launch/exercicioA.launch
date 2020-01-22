@@ -1,0 +1,14 @@
+<launch>
+	<node 
+		pkg="first_pack" 
+		name="somadorA" 
+		type="add_two_ints_server" >
+		<remap from="add_two_ints" to="CanalA"/>
+	</node>
+	<node 
+		pkg="first_pack" 
+		name="somadorB" 
+		type="add_two_ints_server.py" >
+		<remap from="add_two_ints" to="CanalB"/>
+	</node>
+</launch>

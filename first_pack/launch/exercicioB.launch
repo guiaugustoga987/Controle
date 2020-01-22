@@ -1,0 +1,17 @@
+<launch>
+	<group ns="SomadorA">
+		<node 
+			pkg="first_pack" 
+			name="add_two_ints_server" 
+			type="add_two_ints_server" >
+		</node>
+	</group>
+
+	<group ns="SomadorB">
+		<node 
+			pkg="first_pack" 
+			name="add_two_ints_server" 
+			type="add_two_ints_server" >
+		</node>
+	</group>
+</launch>

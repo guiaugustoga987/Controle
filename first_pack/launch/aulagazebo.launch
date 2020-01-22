@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<launch>
+<!--  world respawn-->
+    <include file="$(find first_pack)/launch/world.launch" >
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="world_name" value="$(find first_pack)/worlds/trabalho4alterado.world" />
+    </include>    
+
+
+<!-- models respawn -->
+
+<!--    <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+          args="-file /$(find first_pack)/models/my_robot/model.sdf
+                -sdf
+		-model my_robot
+ 	      -x 3.3131 -y 1.6963 -z 0
+              -R 0 -P 0 -Y 0"/> -->
+
+
+
+
+
+</launch>
+
+

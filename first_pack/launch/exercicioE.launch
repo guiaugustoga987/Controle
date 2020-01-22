@@ -1,0 +1,22 @@
+<launch>
+	<param 
+		name="/background_r"
+		type="int"
+		value="15" />
+	<param 
+		name="/background_g"
+		type="int"
+		value="15" />
+	<param 
+		name="/background_b"
+		type="int"
+		value="15" />
+
+	<node
+		pkg="rosservice"
+		name="servissim"
+		type="rosservice"
+		args="call /clear">
+	</node>
+
+</launch>
